@@ -6,6 +6,7 @@ Sinatra application to test and debug your Nexmo credentials and environment. Ut
 * [Installation and Usage](#installation-and-usage)
   * [API Credentials](#api-credentials)
   * [Using ngrok](#using-ngrok)
+  * [Running the Application](#running-the-application)
 * [Contributing](#contributing)
 * [License](#license)
 
@@ -54,6 +55,24 @@ Once you have your ngrok URL, you can enter your [Nexmo Dashboard](https://dashb
 `#{ngrok URL}/webhooks/event`
 
 You can then call your Nexmo Voice application, and with your skeleton application running you can observe the webhook data be received in real time for diagnosis of any issues and testing of your Nexmo account.
+
+### Running the Application
+
+Once you have your API credentials incorporated and your ngrok setup ready, you can go ahead and use this skeleton app. To start the application's server, run the following from the command line inside the directory of the app:
+
+```bash
+ruby app.rb
+```
+
+You can test that your credentials work by sending a test SMS by navigating to `https://localhost:3000/test-sms` in your browser or by sending a cURL GET request to that URL. If you configured your `TO_NUMBER` to be your own number, you should receive a text message shortly after that says: "This is a test SMS of my Nexmo Ruby skeleton app.". 
+
+The skeleton app is also capable of receiving Nexmo API webhook data. As mentioned in the [Using ngrok](#using-ngrok) section above, a good candidate for that test is a Nexmo Voice application. From within your Nexmo dashboard you can create a Nexmo Voice application, provision a Nexmo virtual phone number and then link that number to your Voice application. Once you have ensured that your new Voice application's `EVENT URL` is `#{ngrok URL}/webhooks/event`, you can then give your Nexmo number a phone call. You should see the webhook data in your console in real time. For example, data for a ringing phone call will look like this:
+
+```
+{:from=>"447700900000", :to=>"447700900000", :uuid=>"a123456789012345fbdsw", :conversation_uuid=>"CON-234567-fdsfs34-vfddfh-btger3-22345", :status=>"ringing", :direction=>"inbound", :timestamp=>"2020-01-07T11:24:49.478Z"}
+```
+
+You can exit your application at anytime by holding down the CTRL and C keys on your keyboard.
 
 ## Contributing
 
