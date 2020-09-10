@@ -2,7 +2,7 @@ require './app'
 require 'rspec'
 require 'rack/test'
 
-RSpec.describe 'Nexmo Ruby skeleton app' do
+RSpec.describe 'Vonage Ruby skeleton app' do
   include Rack::Test::Methods
 
   let(:app) do
