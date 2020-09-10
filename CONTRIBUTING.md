@@ -1,6 +1,6 @@
 # Contributing
 
-Thanks for considering contributing to Nexmo Ruby skeleton app. From typos, code and beyond, we truly appreciate and welcome input from everyone.
+Thanks for considering contributing to Vonage Ruby skeleton app. From typos, code and beyond, we truly appreciate and welcome input from everyone.
 
 You can read all about our markdown additions, writing style guide and standard placeholders on our [Contributing page](https://developer.nexmo.com/contribute/overview). Once you have a change to share with us, read on ...
 
