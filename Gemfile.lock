@@ -4,14 +4,10 @@ GEM
     backports (3.18.1)
     dotenv (2.7.6)
     json (2.3.1)
-    jwt (2.2.1)
+    jwt (2.2.2)
     multi_json (1.15.0)
     mustermann (1.1.1)
       ruby2_keywords (~> 0.0.1)
-    nexmo (7.2.0)
-      nexmo-jwt (~> 0.1.1)
-      sorbet-runtime (~> 0.5)
-      zeitwerk (~> 2, >= 2.2)
     nexmo-jwt (0.1.1)
       jwt (~> 2)
     rack (2.2.3)
@@ -30,8 +26,12 @@ GEM
       rack-protection (= 2.0.8.1)
       sinatra (= 2.0.8.1)
       tilt (~> 2.0)
-    sorbet-runtime (0.5.5867)
+    sorbet-runtime (0.5.5909)
     tilt (2.0.10)
+    vonage (7.2.0)
+      nexmo-jwt (~> 0.1.1)
+      sorbet-runtime (~> 0.5)
+      zeitwerk (~> 2, >= 2.2)
     zeitwerk (2.4.0)
 
 PLATFORMS
@@ -40,9 +40,9 @@ PLATFORMS
 DEPENDENCIES
   dotenv
   json
-  nexmo
   sinatra
   sinatra-contrib
+  vonage
 
 BUNDLED WITH
-   2.0.2
+   2.1.4
